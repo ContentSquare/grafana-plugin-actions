@@ -1,4 +1,4 @@
-const { run, VersionResolverTypeInput, VersionResolverTypes, GrafanaDependencyInput } = require('./index');
+const { run, VersionResolverTypeInput, VersionResolverTypes, GrafanaDependencyInput, PluginPathInput, LimitInput } = require('./index');
 const mockVersions = require('./mocks/versions');
 const { getInput, getBooleanInput } = require('@actions/core');
 
@@ -47,6 +47,12 @@ describe('plugin-grafana-dependency mode', () => {
       }
       if (name === GrafanaDependencyInput) {
         return t.grafanaDependency;
+      }
+      if (name === PluginPathInput) {
+        return '';
+      }
+      if (name === LimitInput) {
+        return '6';
       }
     });
     getBooleanInput.mockReturnValue(true);
