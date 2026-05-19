@@ -32,12 +32,12 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v4
+    - uses: ContentSquare/actions-setup-node@approved-v4
       with:
         node-version: "${{ inputs.node-version }}"
 
     - name: Setup Go environment
-      uses: actions/setup-go@v5
+      uses: ContentSquare/actions-setup-go@approved-v5
       with:
         go-version: "${{ inputs.go-version }}"
 
@@ -60,14 +60,14 @@ runs:
 
     - name: Test backend
       if: steps.check-for-backend.outputs.has-backend == 'true'
-      uses: magefile/mage-action@v3
+      uses: ContentSquare/magefile-mage-action@approved-v3
       with:
         version: latest
         args: coverage
 
     - name: Build backend
       if: steps.check-for-backend.outputs.has-backend == 'true'
-      uses: magefile/mage-action@v3
+      uses: ContentSquare/magefile-mage-action@approved-v3
       with:
         version: latest
         args: buildAll
