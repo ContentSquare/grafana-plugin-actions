@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/grafana/plugin-actions/compare/deploy-report-pages/v1.1.0...deploy-report-pages/v1.1.1) (2026-05-22)
+
+
+### 🔧 Chores
+
+* **playwright-gh-pages:** narrow down permissions ([#222](https://github.com/grafana/plugin-actions/issues/222)) ([dce3738](https://github.com/grafana/plugin-actions/commit/dce3738930e8d27a158a8153d7b727c843a6d2ab))
+
 ## [1.1.0](https://github.com/grafana/plugin-actions/compare/deploy-report-pages/v1.0.2...deploy-report-pages/v1.1.0) (2025-11-12)
 
 
