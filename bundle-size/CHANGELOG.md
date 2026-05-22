@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.1](https://github.com/grafana/plugin-actions/compare/bundle-size/v1.1.0...bundle-size/v1.1.1) (2026-05-22)
+
+
+### 📝 Documentation
+
+* **bundle-size:** harden permisions in readme example ([d038198](https://github.com/grafana/plugin-actions/commit/d03819869ff83790bb6549d1b917cff7bb7278ae))
+
+
+### 🔧 Chores
+
+* harden permisions in bundle-stats readme example ([#221](https://github.com/grafana/plugin-actions/issues/221)) ([d038198](https://github.com/grafana/plugin-actions/commit/d03819869ff83790bb6549d1b917cff7bb7278ae))
+
 ## [1.1.0](https://github.com/grafana/plugin-actions/compare/bundle-size/v1.0.3...bundle-size/v1.1.0) (2025-11-13)
 
 
