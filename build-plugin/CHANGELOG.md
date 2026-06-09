@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/grafana/plugin-actions/compare/build-plugin/v1.2.0...build-plugin/v1.2.1) (2026-06-09)
+
+
+### 🐛 Bug Fixes
+
+* **build-plugin:** use GitHub API to create signed changelog commit ([#241](https://github.com/grafana/plugin-actions/issues/241)) ([33a8775](https://github.com/grafana/plugin-actions/commit/33a8775f5df798793034b5e84a3f3214fe88c12f))
+
 ## [1.2.0](https://github.com/grafana/plugin-actions/compare/build-plugin/v1.1.0...build-plugin/v1.2.0) (2026-02-24)
 
 
