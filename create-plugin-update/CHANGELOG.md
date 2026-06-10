@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/grafana/plugin-actions/compare/create-plugin-update/v2.0.2...create-plugin-update/v2.0.3) (2026-06-10)
+
+
+### 🐛 Bug Fixes
+
+* **create-plugin-update:** use GitHub API for signed commits ([#243](https://github.com/grafana/plugin-actions/issues/243)) ([e7454d7](https://github.com/grafana/plugin-actions/commit/e7454d721b60af8ac7e09468ebd8f8870586fc68))
+
 ## [2.0.2](https://github.com/grafana/plugin-actions/compare/create-plugin-update/v2.0.1...create-plugin-update/v2.0.2) (2026-03-09)
 
 
