@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/grafana/plugin-actions/compare/is-compatible/v1.0.4...is-compatible/v1.0.5) (2026-07-30)
+
+
+### 🔧 Chores
+
+* **deps:** update actions/setup-node action to v6.5.0 ([#283](https://github.com/grafana/plugin-actions/issues/283)) ([89f1c1f](https://github.com/grafana/plugin-actions/commit/89f1c1f9c776caabdd2ae0f2a087a64d341a4866))
+* **deps:** update marocchino/sticky-pull-request-comment action to v3 ([#279](https://github.com/grafana/plugin-actions/issues/279)) ([ca59bb4](https://github.com/grafana/plugin-actions/commit/ca59bb48f8609c299dfabfc9e47bbc4d487cb98e))
+
 ## [1.0.4](https://github.com/grafana/plugin-actions/compare/is-compatible/v1.0.3...is-compatible/v1.0.4) (2026-07-13)
 
 
