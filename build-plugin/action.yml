@@ -36,7 +36,7 @@ runs:
   steps:
     - name: Package plugin
       id: "package-plugin"
-      uses: grafana/plugin-actions/package-plugin@main
+      uses: ContentSquare/grafana-plugin-actions/package-plugin@approved-main
       with:
         policy_token: ${{ inputs.policy_token }}
         node-version: "${{ inputs.node-version }}"
@@ -68,7 +68,7 @@ runs:
       shell: bash
 
     - name: Create Github release
-      uses: softprops/action-gh-release@v2
+      uses: ContentSquare/softprops-action-gh-release@approved-v2
       with:
         draft: true
         generate_release_notes: true
