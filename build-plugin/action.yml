@@ -68,7 +68,7 @@ runs:
   steps:
     - name: Package plugin
       id: "package-plugin"
-      uses: grafana/plugin-actions/package-plugin@main # zizmor: ignore[unpinned-uses]
+      uses: ContentSquare/grafana-plugin-actions/package-plugin@approved-main # zizmor: ignore[unpinned-uses]
       with:
         policy_token: ${{ inputs.policy_token }}
         sign_root_urls: ${{ inputs.sign_root_urls }}
@@ -98,7 +98,7 @@ runs:
     - name: Generate Changelog
       id: github-changelog-generator
       if: ${{ inputs.use_changelog_generator == 'true' }}
-      uses: janheinrichmerker/action-github-changelog-generator@e60b5a2bd9fcd88dadf6345ff8327863fb8b490f # v2.4
+      uses: ContentSquare/janheinrichmerker-action-github-changelog-generator@approved-e60b5a2bd9fcd88dadf6345ff8327863fb8b490f # v2.4
       with:
         token: ${{ inputs.token }}
         output: CHANGELOG.md
@@ -127,7 +127,7 @@ runs:
     - name: Generate artifact attestation
       if: ${{ inputs.attestation == 'true' }}
       id: attestation
-      uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+      uses: ContentSquare/actions-attest-build-provenance@approved-4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
       with:
         subject-path: ${{ steps.package-plugin.outputs.archive }}
 
@@ -166,7 +166,7 @@ runs:
           }' | gh api graphql --input -
 
     - name: Create Github release
-      uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
+      uses: ContentSquare/softprops-action-gh-release@approved-efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
       with:
         draft: true
         generate_release_notes: true

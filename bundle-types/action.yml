@@ -47,7 +47,7 @@ runs:
 
       shell: bash
 
-    - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+    - uses: ContentSquare/actions-setup-node@approved-949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
       with:
         node-version: "${{ inputs.node-version }}"
 
@@ -69,7 +69,7 @@ runs:
 
     - name: Generate token
       id: generate-token
-      uses: grafana/shared-workflows/actions/create-github-app-token@5bbb526b1728ca57fbe1750c4c27ab6ab06171c2 # create-github-app-token/v1.0
+      uses: ContentSquare/grafana-shared-workflows/actions/create-github-app-token@approved-5bbb526b1728ca57fbe1750c4c27ab6ab06171c2 # create-github-app-token/v1.0
       with:
         github_app: grafana-plugins-platform-bot
         permission_set: bundle-types

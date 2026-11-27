@@ -25,7 +25,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+    - uses: ContentSquare/actions-setup-node@approved-949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
       with:
         node-version: 22
     - id: min-package-version
@@ -72,12 +72,12 @@ runs:
         LEVITATE_MIN_PACKAGE_VERSION: ${{ steps.min-package-version.outputs.value }}
 
     # find the current PR (if running in one)
-    - uses: jwalton/gh-find-current-pr@f3d61b485d2801773f7a07b2aaa3306bd8f8e653 # v1.3.5
+    - uses: ContentSquare/jwalton-gh-find-current-pr@approved-f3d61b485d2801773f7a07b2aaa3306bd8f8e653 # v1.3.5
       id: finder
       if: (inputs.comment-pr == 'yes' && steps.run-levitate.outputs.code == 1) || (inputs.comment-pr == 'yes' && inputs.skip-comment-if-compatible == 'no')
 
     # write a comment with levitate output
-    - uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+    - uses: ContentSquare/marocchino-sticky-pull-request-comment@approved-5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
       if: (inputs.comment-pr == 'yes' && steps.run-levitate.outputs.code == 1) || (inputs.comment-pr == 'yes' && inputs.skip-comment-if-compatible == 'no')
       with:
         number: ${{ steps.finder.outputs.pr }}
