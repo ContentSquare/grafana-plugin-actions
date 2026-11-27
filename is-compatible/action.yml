@@ -25,7 +25,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v4
+    - uses: ContentSquare/actions-setup-node@approved-v4
       with:
         node-version: 20
     - id: run-levitate
@@ -44,11 +44,11 @@ runs:
         echo "is-compatible-exit-code=$CODE" >> $GITHUB_OUTPUT
       shell: "bash"
     # find the current PR (if running in one)
-    - uses: jwalton/gh-find-current-pr@v1
+    - uses: ContentSquare/jwalton-gh-find-current-pr@approved-v1
       id: finder
       if: (inputs.comment-pr == 'yes' && steps.run-levitate.outputs.code == 1) || (inputs.comment-pr == 'yes' && inputs.skip-comment-if-compatible == 'no')
     # write a comment with levitate output
-    - uses: marocchino/sticky-pull-request-comment@v2
+    - uses: ContentSquare/marocchino-sticky-pull-request-comment@approved-v2
       if: (inputs.comment-pr == 'yes' && steps.run-levitate.outputs.code == 1) || (inputs.comment-pr == 'yes' && inputs.skip-comment-if-compatible == 'no')
       with:
         number: ${{ steps.finder.outputs.pr }}

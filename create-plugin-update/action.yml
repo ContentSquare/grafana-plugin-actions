@@ -19,7 +19,7 @@ runs:
   using: "composite"
   steps:
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: ContentSquare/actions-setup-node@approved-v4
       with:
         node-version: "${{ inputs.node-version }}"
 
@@ -29,7 +29,7 @@ runs:
       shell: bash
 
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: ContentSquare/actions-checkout@approved-v4
       with:
         persist-credentials: false
         ref: ${{ inputs.base }}
